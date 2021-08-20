@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.socialMedia
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5%;
+}
+.sci
+{
+    position: relative;
+    display: flex;
+}
+.sci li 
+{
+    list-style:none;    
+}
+.sci li::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 14vw;
+pointer-events: none;
+font-weight: 700;
+transition: 0.5%;
+opacity: 0;
+}
+.sci li:hover::before
+{
+    opacity: 0.1;
+    transform: translate(-50%,calc(-50% + 150px));
+}
+.sci li a
+{
+    position: relative;
+    display:inline-block;
+    width: 120px;
+    height: 120px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0,0,0,1);
+    transition: backfround 0.25%;
+}
+
+.sci li a:hover.facebook
+{
+    background: #8177f2;
+
+}
+.sci li a:hover.youtube
+{
+    background: #ff0000;
+    
+}
+.sci li a:hover.linkedin
+{
+    background: #0077b5;
+    
+}
+.sci li a:hover.twitter
+{
+    background: #02b5fc;
+    
+}
+.sci li a:hover.instagram
+{
+    background: #e4405f;
+    
+}
+.sci li a:hover.github
+{
+    background:#171515
+}
+#header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+#header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #094b65;    
+    border-radius: 20px;
+}
+#header ul li a:hover,
+#header ul li a.active
+{
+    background: #094b65;
+    color: #fff;
+}
+#header .logo
+{
+    color: #094b65;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+#header
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+z-index: 10000;
+}
